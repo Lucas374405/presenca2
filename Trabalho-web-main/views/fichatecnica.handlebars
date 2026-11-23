@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<div class="pure-g">
+    <div class="pure-u-1">
+
+        <h1>Lista de Fichas Técnicas</h1>
+
+        <a href="/" class="pure-button">
+            <i class="fa-solid fa-house"></i>
+            Inicial
+        </a>
+
+        <a href="/Fichatecnica/cadastrar" class="pure-button pure-button-primary">
+            <i class="fa-solid fa-plus"></i>
+            Cadastrar Ficha Técnica
+        </a>
+
+        <hr>
+
+        <table class="pure-table pure-table-bordered">
+
+            <thead>
+                <tr>
+                    <th>Duração</th>
+                    <th>Orçamento</th>
+                    <th>Bilheteria</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each fichaTecnica}}
+                    <tr>
+
+                        <td>
+                            {{this.duracaoMinutos}} minutos
+                        </td>
+
+                        <td>
+                            {{this.orcamento}}
+                        </td>
+
+                        <td>
+                            {{this.bilheteria}}
+                        </td>
+
+                        <td>
+
+                            <a href="/Fichatecnica/{{this.id}}"
+                               class="pure-button">
+                                <i class="fa-solid fa-eye"></i>
+                                Detalhar
+                            </a>
+
+                            <a href="/Fichatecnica/{{this.id}}/editar"
+                               class="pure-button">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                Editar
+                            </a>
+
+                            <form action="/Fichatecnica/{{this.id}}?_method=DELETE"
+                                  method="POST"
+                                  style="display: inline;">
+
+                                <button type="submit" class="pure-button">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                    Excluir
+                                </button>
+
+                            </form>
+
+                        </td>
+
+                    </tr>
+                {{/each}}
+            </tbody>
+
+        </table>
+
+    </div>
+</div>

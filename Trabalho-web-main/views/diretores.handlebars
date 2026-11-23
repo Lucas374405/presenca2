@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<div class="pure-g">
+    <div class="pure-u-1">
+
+        <h1>Lista de Diretores</h1>
+
+        <a href="/" class="pure-button">
+            <i class="fa-solid fa-house"></i>
+            Inicial
+        </a>
+
+        <a href="/diretores/cadastrar" class="pure-button pure-button-primary">
+            <i class="fa-solid fa-plus"></i>
+            Cadastrar Diretor
+        </a>
+
+        <hr>
+
+        <table class="pure-table pure-table-bordered">
+
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Ano de nascimento</th>
+                    <th>Nacionalidade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each diretores}}
+                    <tr>
+                        <td>
+                            <a href="/diretores/{{this.id}}">
+                                {{this.nome}}
+                            </a>
+                        </td>
+
+                        <td>
+                            {{this.anoNascimento}}
+                        </td>
+
+                        <td>
+                            {{this.nacionalidade}}
+                        </td>
+
+                        <td>
+                            <a href="/diretores/{{this.id}}/editar"
+                               class="pure-button">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                Editar
+                            </a>
+
+                            <form action="/diretores/{{this.id}}?_method=DELETE"
+                                  method="POST"
+                                  style="display: inline;">
+
+                                <button type="submit" class="pure-button">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                    Excluir
+                                </button>
+
+                            </form>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+
+        </table>
+
+    </div>
+</div>

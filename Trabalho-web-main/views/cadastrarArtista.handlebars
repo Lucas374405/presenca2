@@ -1,0 +1,45 @@
+<div class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-2">
+
+        <h1>Cadastrar Artista</h1>
+
+        <form action="/artistas" method="POST" class="pure-form pure-form-stacked">
+
+            <label for="nome">Nome do Artista:</label>
+            <input type="text" id="nome" name="nome">
+
+            <label for="anoNascimento">Ano de Nascimento:</label>
+            <input type="number" id="anoNascimento" name="anoNascimento">
+
+            <label for="nomeArtistico">Nome artístico:</label>
+            <input type="text" id="nomeArtistico" name="nomeArtistico">
+
+            <label for="emAtividade">Em atividade?</label>
+            <input type="checkbox" id="emAtividade" name="emAtividade">
+
+            <label for="foto">Foto:</label>
+            <input type="text" id="foto" name="foto">
+
+            <label for="filmes">Filmes:</label>
+            <select id="filmes" name="filmes" multiple>
+                {{#each filmes}}
+                    <option value="{{this.id}}">
+                        {{this.nome}}
+                    </option>
+                {{/each}}
+            </select>
+
+            <br>
+
+            <button type="submit" class="pure-button pure-button-primary">
+                Cadastrar
+            </button>
+
+            <a href="/artistas" class="pure-button">
+                Voltar
+            </a>
+
+        </form>
+
+    </div>
+</div>

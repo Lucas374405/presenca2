@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<div class="pure-g">
+    <div class="pure-u-1">
+
+        <h1>Detalhar Artista</h1>
+
+        <a href="/" class="pure-button">
+            <i class="fa-solid fa-house"></i>
+            Inicial
+        </a>
+
+        <a href="/artistas" class="pure-button">
+            <i class="fa-solid fa-users"></i>
+            Artistas
+        </a>
+
+        <hr>
+
+        <div class="pure-form pure-form-stacked">
+
+            <label>Nome:</label>
+            <p>{{artista.nome}}</p>
+
+            <label>Ano de Nascimento:</label>
+            <p>{{artista.anoNascimento}}</p>
+
+            <label>Em atividade?</label>
+
+            <p>
+                {{#if artista.emAtividade}}
+                    Sim
+                {{else}}
+                    Não
+                {{/if}}
+            </p>
+
+            <label>Foto:</label>
+
+            <p>
+                <img src="{{artista.foto}}"
+                     alt="Foto do artista"
+                     width="200">
+            </p>
+
+            <label>Nome Artístico:</label>
+            <p>{{artista.nomeArtistico}}</p>
+
+            <label>Filmes:</label>
+
+            <ul>
+                {{#each artista.filmes}}
+                    <li>
+                        <a href="/filmes/{{this.id}}">
+                            {{this.nome}} ({{this.ano}})
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+
+        </div>
+
+    </div>
+</div>

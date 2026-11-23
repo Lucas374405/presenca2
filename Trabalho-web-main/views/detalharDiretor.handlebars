@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<div class="pure-g">
+    <div class="pure-u-1">
+
+        <h1>Detalhar Diretor</h1>
+
+        <a href="/" class="pure-button">
+            <i class="fa-solid fa-house"></i>
+            Inicial
+        </a>
+
+        <a href="/diretores" class="pure-button">
+            <i class="fa-solid fa-user"></i>
+            Diretores
+        </a>
+
+        <hr>
+
+        <div class="pure-form pure-form-stacked">
+
+            <label>Nome:</label>
+            <p>{{diretor.nome}}</p>
+
+            <label>Ano de Nascimento:</label>
+            <p>{{diretor.anoNascimento}}</p>
+
+            <label>Nacionalidade:</label>
+            <p>{{diretor.nacionalidade}}</p>
+
+            <label>Filmes:</label>
+
+            <ul>
+                {{#each diretor.filmes}}
+                    <li>
+                        <a href="/filmes/{{this.id}}">
+                            {{this.nome}} ({{this.ano}})
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+
+        </div>
+
+    </div>
+</div>

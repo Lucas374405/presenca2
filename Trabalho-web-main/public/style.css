@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f3f5;
+    color: #222;
+}
+
+.pure-g {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 25px;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #222;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 30px 0;
+}
+
+.pure-form {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.pure-form input[type="text"],
+.pure-form input[type="number"],
+.pure-form select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.pure-form input:focus,
+.pure-form select:focus {
+    border-color: #0078e7;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 120, 231, 0.15);
+}
+
+.pure-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.pure-button {
+    border-radius: 6px;
+    padding: 10px 16px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.pure-button-primary {
+    background: #0078e7;
+    color: white;
+}
+
+.pure-table {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.pure-table thead {
+    background: #222;
+    color: white;
+}
+
+.pure-table th {
+    padding: 15px;
+}
+
+.pure-table td {
+    padding: 14px;
+}
+
+.pure-table tbody tr:hover {
+    background: #f5f5f5;
+}
+
+a {
+    color: #0078e7;
+}
+
+.pure-button {
+    color: #333;
+}
+
+.pure-button-primary {
+    color: white;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+img {
+    border-radius: 10px;
+    max-width: 200px;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-bottom: 20px;
+}

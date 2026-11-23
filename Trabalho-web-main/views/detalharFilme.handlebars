@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<div class="pure-g">
+    <div class="pure-u-1">
+
+        <h1>Detalhar Filme</h1>
+
+        <a href="/" class="pure-button">
+            <i class="fa-solid fa-house"></i>
+            Inicial
+        </a>
+
+        <a href="/filmes" class="pure-button">
+            <i class="fa-solid fa-film"></i>
+            Filmes
+        </a>
+
+        <hr>
+
+        <div class="pure-form pure-form-stacked">
+
+            <label>Nome:</label>
+            <p>{{filme.nome}}</p>
+
+            <label>Ano:</label>
+            <p>{{filme.ano}}</p>
+
+            <label>Diretor:</label>
+            <p>
+                <a href="/diretores/{{filme.diretor.id}}">
+                    {{filme.diretor.nome}}
+                    - {{filme.diretor.anoNascimento}}
+                    - {{filme.diretor.nacionalidade}}
+                </a>
+            </p>
+
+            <label>Artistas:</label>
+
+            <ul>
+                {{#each filme.artistas}}
+                    <li>
+                        <a href="/artistas/{{this.id}}">
+                            {{this.nome}} - {{this.anoNascimento}}
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+
+        </div>
+
+    </div>
+</div>
